@@ -24,5 +24,4 @@ public interface AlunosService {
 
     @DELETE("alunos/{ra}")
     Call<Aluno> removerAluno(@Body Aluno aluno);
-
 }
