@@ -73,7 +73,7 @@ public class GetActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                
+
             }
         });
     }
