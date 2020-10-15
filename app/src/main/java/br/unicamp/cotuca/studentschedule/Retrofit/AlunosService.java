@@ -14,7 +14,7 @@ public interface AlunosService {
     Call<Aluno[]> buscarAlunos();
 
     @GET("alunos/{ra}")
-    Call<Aluno> buscarAluno(@Path("ra") String ra);
+    Call<Aluno> buscarAluno(@Path("ra") int ra);
 
     @POST("alunos")
     Call<Aluno> cadastrarAluno(@Body Aluno aluno);
