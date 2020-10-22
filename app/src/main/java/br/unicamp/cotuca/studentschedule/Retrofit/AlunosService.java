@@ -1,5 +1,7 @@
 package br.unicamp.cotuca.studentschedule.Retrofit;
 
+import java.util.List;
+
 import br.unicamp.cotuca.studentschedule.Models.Aluno;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -11,7 +13,7 @@ import retrofit2.http.Path;
 
 public interface AlunosService {
     @GET("alunos")
-    Call<Aluno[]> buscarAlunos();
+    Call<List<Aluno>> buscarAlunos();
 
     @GET("alunos/{ra}")
     Call<Aluno> buscarAluno(@Path("ra") int ra);
@@ -23,5 +25,5 @@ public interface AlunosService {
     Call<Aluno> editarAluno(@Body Aluno aluno);
 
     @DELETE("alunos/{ra}")
-    Call<Aluno> removerAluno(@Body Aluno aluno);
+    Call<Aluno> removerAluno(@Path("ra") int ra);
 }

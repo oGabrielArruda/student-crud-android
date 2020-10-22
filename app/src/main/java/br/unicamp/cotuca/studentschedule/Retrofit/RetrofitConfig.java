@@ -9,7 +9,7 @@ public class RetrofitConfig {
 
     public RetrofitConfig() {
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("meuip:3000/aluno/")
+                .baseUrl("http://192.168.0.4:5000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

@@ -4,6 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeleteActivity">
+    tools:context=".PostActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Excluir Aluno"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="RA"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></TextView>
+
+    <EditText
+        android:id="@+id/edtRaDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="32dp"></EditText>
+
+    <Button
+        android:id="@+id/btnExcluirAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:gravity="center_horizontal"
+        android:text="Excluir Aluno"
+        app:layout_constraintTop_toBottomOf="@+id/edtRaDelete" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
