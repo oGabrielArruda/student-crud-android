@@ -27,7 +27,7 @@ public class PostActivity extends AppCompatActivity {
         Button btnIncluir = (Button) findViewById(R.id.btnInserirAluno);
         final EditText edtRa = (EditText) findViewById(R.id.edtRaPost);
         final EditText edtNome = (EditText) findViewById(R.id.edtNomePost);
-        final EditText edtEmail = (EditText) findViewById(R.id.edtNomePost);
+        final EditText edtEmail = (EditText) findViewById(R.id.edtEmailPost);
 
         final TextView tvRa = (TextView) findViewById(R.id.raInserido);
         final TextView tvNome = (TextView) findViewById(R.id.nomeInserido);
@@ -39,6 +39,7 @@ public class PostActivity extends AppCompatActivity {
                 String ra = edtRa.getText().toString();
                 String nome = edtNome.getText().toString();
                 String email = edtEmail.getText().toString();
+                Toast.makeText(PostActivity.this, email, Toast.LENGTH_SHORT);
                 if(ra == null || ra.isEmpty() || nome == null || nome.isEmpty() || email == null || email.isEmpty())
                     Toast.makeText(PostActivity.this, "Ra nulo", Toast.LENGTH_SHORT);
                 else

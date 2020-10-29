@@ -37,13 +37,15 @@ public class DeleteActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<Aluno> call, Response<Aluno> response) {
                             if (response.isSuccessful()){
-                                Toast.makeText(DeleteActivity.this, "Aluno deletado", Toast.LENGTH_SHORT);
+                                if (response.body().getNome() != null) {
+                                    Toast.makeText(DeleteActivity.this, "Aluno deletado", Toast.LENGTH_SHORT);
+                                }
                             }
                         }
 
                         @Override
                         public void onFailure(Call<Aluno> call, Throwable t) {
-
+                            Toast.makeText(DeleteActivity.this, "Aluno não existe", Toast.LENGTH_SHORT);
                         }
                     });
                 }
